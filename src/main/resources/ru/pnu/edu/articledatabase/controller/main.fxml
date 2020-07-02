@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1300.0" style="-fx-background-color: #2E3343;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.pnu.edu.articledatabase.controller.JavaFxController">
+    <children>
+        <TabPane fx:id="tabPane" layoutY="25.0" prefHeight="680.0" prefWidth="1300.0" style="-fx-background-color: #607d8b;" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="articlePage" text="Статья">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="649.0" prefWidth="1300.0" style="-fx-background-color: #607d8b;">
+                            <children>
+                                <TableView fx:id="articleTable" layoutY="50.0" prefHeight="600.0" prefWidth="1300.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="Название" />
+                                        <TableColumn prefWidth="85.0" text="Учебный год" />
+                                        <TableColumn prefWidth="94.0" text="Область науки" />
+                                        <TableColumn prefWidth="98.0" text="Журнал/Конференция" />
+                                        <TableColumn prefWidth="98.0" text="Уровень статьи" />
+                                        <TableColumn minWidth="0.0" prefWidth="63.0" text="Тип издания" />
+                                        <TableColumn prefWidth="61.0" text="Этап" />
+                                        <TableColumn prefWidth="89.0" text="Авторы" />
+                                        <TableColumn prefWidth="65.0" text="Объём" />
+                                        <TableColumn prefWidth="68.0" text="Дата отправки" />
+                                        <TableColumn prefWidth="88.0" text="Примечания" />
+                                        <TableColumn prefWidth="83.0" text="Цена публикации" />
+                                        <TableColumn prefWidth="81.0" text="Заключение комиссии о возможности открытого публикования " />
+                                        <TableColumn prefWidth="76.0" text="Заключение комиссии экспортного контроля" />
+                                        <TableColumn prefWidth="87.0" text="Файл статьи" />
+                                        <TableColumn prefWidth="96.0" text="Код статьи" />
+                                    </columns>
+                                </TableView>
+                                <TextField fx:id="searchLine" layoutX="66.0" layoutY="12.0" prefHeight="25.0" prefWidth="300.0" style="-fx-border-color: silver; -fx-border-radius: 5;">
+                                    <font>
+                                        <Font name="Arial" size="15.0" />
+                                    </font>
+                                </TextField>
+                                <Label fx:id="searchLabel" layoutX="14.0" layoutY="17.0" text="Поиск">
+                                    <font>
+                                        <Font name="Arial Italic" size="15.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="magazinePage" text="Журнал/Конференция">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="573.0" prefWidth="1309.0" style="-fx-background-color: #607d8b;">
+                            <children>
+                                <TableView fx:id="magazineTable" layoutY="50.0" prefHeight="603.0" prefWidth="1300.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="Название" />
+                                        <TableColumn prefWidth="144.0" text="Ссылка на страницу" />
+                                        <TableColumn minWidth="0.0" prefWidth="152.0" text="Адреса электр. почты" />
+                                        <TableColumn minWidth="0.0" prefWidth="180.0" text="Выпуск" />
+                                        <TableColumn minWidth="0.0" prefWidth="157.0" text="Диапазон страниц" />
+                                        <TableColumn prefWidth="143.0" text="Код журнала" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="releasePage" text="Выпуск">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="1298.0" style="-fx-background-color: #607d8b;">
+                            <children>
+                                <TableView fx:id="releaseTable" layoutY="50.0" prefHeight="603.0" prefWidth="1300.0">
+                                    <columns>
+                                        <TableColumn prefWidth="157.0" text="Год выпуска" />
+                                        <TableColumn minWidth="4.0" prefWidth="262.0" text="Номер издания" />
+                                        <TableColumn minWidth="0.0" prefWidth="251.0" text="Код выпуска" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="openPublicationPage" text="Заключение комиссии о возможности открытого публикования">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="1298.0" style="-fx-background-color: #607d8b;">
+                            <children>
+                                <TableView fx:id="openPublicationTable" layoutY="50.0" prefHeight="604.0" prefWidth="1300.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="Дата" />
+                                        <TableColumn prefWidth="75.0" text="Номер" />
+                                        <TableColumn prefWidth="168.0" text="Код заключения" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="exportControlPage" text="Заключение комиссии экспортного контроля">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="1298.0" style="-fx-background-color: #607d8b;">
+                            <children>
+                                <TableView fx:id="exportControlTable" layoutY="50.0" prefHeight="603.0" prefWidth="1300.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="Дата" />
+                                        <TableColumn prefWidth="75.0" text="Номер" />
+                                        <TableColumn prefWidth="168.0" text="Код заключения" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <Button fx:id="add" layoutX="445.0" layoutY="721.0" mnemonicParsing="false" text="Добавить">
+            <font>
+                <Font name="Courier New" size="16.0" />
+            </font>
+        </Button>
+        <Button fx:id="edit" layoutX="577.0" layoutY="721.0" mnemonicParsing="false" text="Редактировать">
+            <font>
+                <Font name="Courier New" size="16.0" />
+            </font>
+        </Button>
+        <Button fx:id="delete" layoutX="752.0" layoutY="721.0" mnemonicParsing="false" text="Удалить">
+            <font>
+                <Font name="Courier New" size="16.0" />
+            </font>
+        </Button>
+        <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="1300.0">
+            <menus>
+                <Menu fx:id="createGroup" mnemonicParsing="false" text="Создать группу" />
+                <Menu fx:id="generateConclusions" mnemonicParsing="false" text="Сгенерировать заключения" />
+                <Menu fx:id="generateQuote" mnemonicParsing="false" text="Сгенерировать цитату по ГОСТу" />
+                <Menu fx:id="generatePublishList" mnemonicParsing="false" text="Сгенерировать список публикаций за 5 лет" />
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>
