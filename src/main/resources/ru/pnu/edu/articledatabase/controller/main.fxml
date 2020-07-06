@@ -78,9 +78,9 @@
                             <children>
                                 <TableView fx:id="releaseTable" layoutY="50.0" prefHeight="603.0" prefWidth="1300.0">
                                     <columns>
-                                        <TableColumn prefWidth="157.0" text="Год выпуска" />
-                                        <TableColumn minWidth="4.0" prefWidth="262.0" text="Номер издания" />
-                                        <TableColumn minWidth="0.0" prefWidth="251.0" text="Код выпуска" />
+                                        <TableColumn fx:id="year" prefWidth="157.0" text="Год выпуска" />
+                                        <TableColumn fx:id="number" minWidth="4.0" prefWidth="262.0" text="Номер издания" />
+                                        <TableColumn fx:id="release_id" minWidth="0.0" prefWidth="251.0" text="Код выпуска" />
                                     </columns>
                                 </TableView>
                             </children>

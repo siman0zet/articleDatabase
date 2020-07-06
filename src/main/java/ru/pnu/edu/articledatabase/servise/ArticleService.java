@@ -1,4 +1,4 @@
-package ru.pnu.edu.articledatabase.controller;
+package ru.pnu.edu.articledatabase.servise;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.hibernate.Session;
 import ru.pnu.edu.articledatabase.entity.Article;
 import ru.pnu.edu.articledatabase.servise.HibernateUtil;
 
-public class ArticleCRUD {
+public class ArticleService {
 
     public void save(Article article) {
         Session session = HibernateUtil.getSessionFactory().openSession(); //открываем сессию
