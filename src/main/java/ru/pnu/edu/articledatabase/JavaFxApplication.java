@@ -19,7 +19,8 @@ public class JavaFxApplication extends Application {
         String[] args = getParameters().getRaw().toArray(new String[0]);
 
         this.applicationContext =
-                new SpringApplicationBuilder().sources(ArticleDatabaseApplication.class)
+                new SpringApplicationBuilder()
+                        .sources(ArticleDatabaseApplication.class)
                         .run(args);
     }
 

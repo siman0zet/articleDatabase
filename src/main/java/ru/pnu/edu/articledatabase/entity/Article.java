@@ -1,10 +1,21 @@
 package ru.pnu.edu.articledatabase.entity;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.type.BlobType;
+
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
-
+@Builder
+@AllArgsConstructor
+@Entity
+@Data
+@NoArgsConstructor
+@Table(name = "article")
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,6 +30,7 @@ public class Article {
     @Column
     private String science_area;
 
+    @ManyToOne
     @JoinColumn(name = "magazine_id")
     private Magazine magazine_id;
 
@@ -38,6 +50,7 @@ public class Article {
     private Integer volume;
 
     @Column
+    @Temporal(TemporalType.DATE)
     private Date departure_date;
 
     @Column
@@ -46,46 +59,16 @@ public class Article {
     @Column
     private Double price;
 
+    @Column
+    private BlobType article_file;
+
+    @ManyToOne
     @JoinColumn(name = "open_publication_id")
     private OpenPublication open_publication_id;
 
+    @ManyToOne
     @JoinColumn(name = "export_publication_id")
     private ExportControl export_control_id;
 
-
-
-    public Article() {
-
-    }
-
-    public Article(String name, Integer studyYear, Integer id) {
-        this.name = name;
-        this.studyYear = studyYear;
-        this.id = id;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getStudyYear() {
-        return studyYear;
-    }
-
-    public void setStudyYear(Integer studyYear) {
-        this.studyYear = studyYear;
-    }
 
 }
