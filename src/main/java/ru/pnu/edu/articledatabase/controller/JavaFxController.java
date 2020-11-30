@@ -340,7 +340,7 @@ public class JavaFxController {
 
 
         articleDepartureDate.setCellValueFactory(new PropertyValueFactory<Article, Date>("departure_date"));
-        articleDepartureDate.setCellFactory(Table.forTableColumn());
+        articleDepartureDate.setCellFactory(TextFieldTableCell.forTableColumn());
 //        articleDepartureDate.setOnEditCommit((new EventHandler<TableColumn.CellEditEvent<Article, LocalDate>>() {
 //            @Override
 //            public void handle(TableColumn.CellEditEvent<Article, LocalDate> articleDatePickerCellEditEvent) {
