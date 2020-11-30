@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="252.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.pnu.edu.articledatabase.controller.ConferenceController">
+   <children>
+      <TextField fx:id="name" layoutX="40.0" layoutY="71.0" prefHeight="30.0" prefWidth="170.0" promptText="Название" />
+      <TextField fx:id="linkOnPage" layoutX="243.0" layoutY="145.0" prefHeight="30.0" prefWidth="170.0" promptText="Ссылка на страницу" />
+      <TextField fx:id="city" layoutX="40.0" layoutY="145.0" prefHeight="30.0" prefWidth="170.0" promptText="Город" />
+      <TextField fx:id="publishing" layoutX="40.0" layoutY="108.0" prefHeight="30.0" prefWidth="170.0" promptText="Издательство" />
+      <TextField fx:id="emailAddress" layoutX="243.0" layoutY="108.0" prefHeight="30.0" prefWidth="170.0" promptText="Адрес эл.почты" />
+      <Button fx:id="acceptBtn" layoutX="120.0" layoutY="197.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Подтвердить" />
+      <Button fx:id="cancelBtn" layoutX="243.0" layoutY="197.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отменить" />
+      <Label layoutX="121.0" layoutY="24.0" text="Введите данные о конференции">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="conferenceDate" layoutX="243.0" layoutY="71.0" prefHeight="30.0" prefWidth="170.0" promptText="Дата проведения" />
+   </children>
+</AnchorPane>

@@ -28,15 +28,24 @@ public class Magazine {
     @Column(name = "email_addresses")
     private String email_addresses;
 
-    @ManyToOne
-    @JoinColumn(name = "release_id")
-    private Release release_id;
-
-    @Column(name = "page_range")
-    private String page_range;
-
     @Column(name = "conference_date")
     @Temporal(TemporalType.DATE)
     private Date conference_date;
+
+    @Column
+    private Double impact;
+
+    @Column
+    private String city;
+
+    @Column
+    private String publishing;
+
+    @Column
+    private String isbn;
+
+    @Column
+    private String issn;
+
 }
 

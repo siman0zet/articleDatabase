@@ -29,6 +29,7 @@ public class JavaFxApplication extends Application {
         FxWeaver fxWeaver = applicationContext.getBean(FxWeaver.class);
         Parent root = fxWeaver.loadView(JavaFxController.class);
         Scene scene = new Scene(root);
+        stage.setTitle("Учёт научных публикаций");
         stage.setScene(scene);
         stage.show();
     }

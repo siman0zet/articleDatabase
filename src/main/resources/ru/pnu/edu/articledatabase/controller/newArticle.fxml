@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="645.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.pnu.edu.articledatabase.controller.ArticleController">
+   <children>
+      <Button fx:id="acceptBtn" layoutX="85.0" layoutY="594.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Подтвердить" />
+      <Button fx:id="cancelBtn" layoutX="323.0" layoutY="594.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Отменить" />
+      <TextField fx:id="name" layoutX="40.0" layoutY="57.0" prefHeight="30.0" prefWidth="170.0" promptText="Название">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="studyYear" layoutX="40.0" layoutY="96.0" prefHeight="30.0" prefWidth="170.0" promptText="Учебный год">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="authors" layoutX="40.0" layoutY="139.0" prefHeight="30.0" prefWidth="170.0" promptText="Авторы">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="release" layoutX="40.0" layoutY="180.0" prefHeight="30.0" prefWidth="170.0" promptText="Номер выпуска">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="pageRange" layoutX="283.0" layoutY="57.0" prefHeight="30.0" prefWidth="170.0" promptText="Диапазон страниц">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="volume" layoutX="283.0" layoutY="96.0" prefHeight="30.0" prefWidth="170.0" promptText="Объём">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="price" layoutX="283.0" layoutY="139.0" prefHeight="30.0" prefWidth="170.0" promptText="Цена публикации">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Label layoutX="169.0" layoutY="14.0" text="Введите данные о статье">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="departureDate" layoutX="283.0" layoutY="180.0" prefHeight="30.0" prefWidth="170.0" promptText="Дата отправки" />
+      <ComboBox fx:id="articleLevelCmbBox" layoutX="227.0" layoutY="267.0" prefHeight="30.0" prefWidth="226.0" />
+      <ComboBox fx:id="scienceAreaCmbBox" layoutX="227.0" layoutY="225.0" prefHeight="30.0" prefWidth="226.0" />
+      <ComboBox fx:id="stageCmbBox" layoutX="227.0" layoutY="352.0" prefHeight="30.0" prefWidth="226.0" />
+      <ComboBox fx:id="publicationTypeCmbBox" layoutX="227.0" layoutY="311.0" prefHeight="30.0" prefWidth="226.0" />
+      <ComboBox fx:id="openPublicationCmbBox" layoutX="227.0" layoutY="451.0" prefHeight="30.0" prefWidth="226.0" />
+      <ComboBox fx:id="exportControlCmbBox" layoutX="227.0" layoutY="514.0" prefHeight="30.0" prefWidth="226.0" />
+      <ComboBox fx:id="magazineCmbBox" layoutX="227.0" layoutY="393.0" prefHeight="30.0" prefWidth="226.0" />
+      <Label layoutX="40.0" layoutY="225.0" prefHeight="30.0" text="Область науки">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="272.0" text="Уровень статьи">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="316.0" text="Тип издания">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="357.0" text="Этап">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="398.0" prefHeight="20.0" prefWidth="226.0" text="Журнал/конференция">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="499.0" text="Заключение комиссии &#10;о возможности экспортного &#10;контроля">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" layoutX="40.0" layoutY="433.0" prefHeight="66.0" prefWidth="176.0" text="Заключение комиссии &#10;о возможности открытого &#10;опубликования" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

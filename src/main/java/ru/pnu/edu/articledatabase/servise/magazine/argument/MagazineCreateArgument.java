@@ -3,7 +3,6 @@ package ru.pnu.edu.articledatabase.servise.magazine.argument;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
-import ru.pnu.edu.articledatabase.entity.Release;
 
 import java.util.Date;
 
@@ -13,8 +12,11 @@ import java.util.Date;
 public class MagazineCreateArgument {
     String name;
     String linkOnPage;
-    String EmailAddresses;
-    Release releaseId;
+    String emailAddresses;
     Date conferenceDate;
-    String pageRange;
+    Double impact;
+    String isbn;
+    String issn;
+    String city;
+    String publishing;
 }

@@ -1,6 +1,7 @@
 package ru.pnu.edu.articledatabase.entity;
 
 
+import javafx.scene.control.DatePicker;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,51 +17,51 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @Table(name = "article")
-public class Article {
+public class Article{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "article_name")
+    @Column
     private String name;
 
     @Column(name = "study_year")
-    private Integer studyYear;
-
-    @Column
-    private String science_area;
-
-    @ManyToOne
-    @JoinColumn(name = "magazine_id")
-    private Magazine magazine_id;
-
-    @Column
-    private String article_level;
-
-    @Column
-    private String publication_type;
-
-    @Column
-    private String stage;
+    private Integer study_year;
 
     @Column
     private String authors;
 
     @Column
+    private String article_level;
+
+    @Column
+    private String stage;
+
+    @ManyToOne
+    @JoinColumn(name = "magazine_id")
+    private Magazine magazine_id;
+
+    @Column(name = "page_range")
+    private String page_range;
+
+    @Column
+    private Double price;
+
+    @Column(name = "publication_type")
+    private String publication_type;
+
+    @Column
     private Integer volume;
+
+    @Column
+    private Integer release;
 
     @Column
     @Temporal(TemporalType.DATE)
     private Date departure_date;
 
     @Column
-    private String notes;
-
-    @Column
-    private Double price;
-
-    @Column
-    private BlobType article_file;
+    private String science_area;
 
     @ManyToOne
     @JoinColumn(name = "open_publication_id")
@@ -69,6 +70,5 @@ public class Article {
     @ManyToOne
     @JoinColumn(name = "export_publication_id")
     private ExportControl export_control_id;
-
 
 }

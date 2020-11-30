@@ -1,43 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1300.0" style="-fx-background-color: #2E3343;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.pnu.edu.articledatabase.controller.JavaFxController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1300.0" style="-fx-background-color: #2E3343;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.pnu.edu.articledatabase.controller.JavaFxController">
     <children>
-        <TabPane fx:id="tabPane" layoutY="25.0" prefHeight="680.0" prefWidth="1300.0" style="-fx-background-color: #607d8b;" tabClosingPolicy="UNAVAILABLE">
+        <TabPane fx:id="tabPane" prefHeight="705.0" prefWidth="1300.0" style="-fx-background-color: #607d8b;" tabClosingPolicy="UNAVAILABLE">
             <tabs>
                 <Tab fx:id="articlePage" text="Статья">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="649.0" prefWidth="1300.0" style="-fx-background-color: #607d8b;">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="366.0" prefWidth="1300.0" style="-fx-background-color: #607d8b;">
                             <children>
-                                <TableView fx:id="articleTable" layoutY="50.0" prefHeight="600.0" prefWidth="1300.0">
+                                <TableView fx:id="articleTable" layoutY="51.0" prefHeight="624.0" prefWidth="1300.0">
                                     <columns>
-                                        <TableColumn prefWidth="75.0" text="Название" />
-                                        <TableColumn prefWidth="85.0" text="Учебный год" />
-                                        <TableColumn prefWidth="94.0" text="Область науки" />
-                                        <TableColumn prefWidth="98.0" text="Журнал/Конференция" />
-                                        <TableColumn prefWidth="98.0" text="Уровень статьи" />
-                                        <TableColumn minWidth="0.0" prefWidth="63.0" text="Тип издания" />
-                                        <TableColumn prefWidth="61.0" text="Этап" />
-                                        <TableColumn prefWidth="89.0" text="Авторы" />
-                                        <TableColumn prefWidth="65.0" text="Объём" />
-                                        <TableColumn prefWidth="68.0" text="Дата отправки" />
-                                        <TableColumn prefWidth="88.0" text="Примечания" />
-                                        <TableColumn prefWidth="83.0" text="Цена публикации" />
-                                        <TableColumn prefWidth="81.0" text="Заключение комиссии о возможности открытого публикования " />
-                                        <TableColumn prefWidth="76.0" text="Заключение комиссии экспортного контроля" />
-                                        <TableColumn prefWidth="87.0" text="Файл статьи" />
-                                        <TableColumn prefWidth="96.0" text="Код статьи" />
+                                        <TableColumn fx:id="articleName" prefWidth="75.0" text="Название" />
+                                        <TableColumn fx:id="articleStudyYear" prefWidth="85.0" text="Учебный год" />
+                                        <TableColumn fx:id="articleAuthors" prefWidth="89.0" text="Авторы" />
+                                        <TableColumn fx:id="articleLevel" prefWidth="98.0" text="Уровень статьи" />
+                                        <TableColumn fx:id="articleStage" prefWidth="61.0" text="Этап" />
+                                        <TableColumn fx:id="articleMagazineId" prefWidth="98.0" text="Журнал/Конференция" />
+                              <TableColumn fx:id="articleRelease" prefWidth="95.0" text="Номер выпуска" />
+                              <TableColumn fx:id="articlePageRange" prefWidth="98.0" text="Диапазон страниц" />
+                                        <TableColumn fx:id="articleVolume" prefWidth="53.0" text="Объём" />
+                                        <TableColumn fx:id="articleDepartureDate" prefWidth="93.0" text="Дата отправки" />
+                                        <TableColumn fx:id="articleScienceArea" prefWidth="96.0" text="Область науки" />
+                                        <TableColumn fx:id="articlePublicationType" minWidth="0.0" prefWidth="97.0" text="Тип издания" />
+                                        <TableColumn fx:id="articlePrice" prefWidth="50.0" text="Цена публикации" />
+                                        <TableColumn fx:id="articleOpenPublicationId" prefWidth="104.0" text="Заключение комиссии о возможности открытого публикования " />
+                                        <TableColumn fx:id="articleExportControlId" minWidth="0.0" prefWidth="107.0" text="Заключение комиссии экспортного контроля" />
+                                        <TableColumn fx:id="articleId" minWidth="0.0" prefWidth="0.0" text="Код статьи" />
                                     </columns>
                                 </TableView>
                                 <TextField fx:id="searchLine" layoutX="66.0" layoutY="12.0" prefHeight="25.0" prefWidth="300.0" style="-fx-border-color: silver; -fx-border-radius: 5;">
@@ -58,30 +50,16 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="573.0" prefWidth="1309.0" style="-fx-background-color: #607d8b;">
                             <children>
-                                <TableView fx:id="magazineTable" layoutY="50.0" prefHeight="603.0" prefWidth="1300.0">
+                                <TableView fx:id="magazineTable" layoutY="50.0" prefHeight="627.0" prefWidth="1300.0">
                                     <columns>
-                                        <TableColumn fx:id="magazineName" prefWidth="256.0" text="Название" />
-                              <TableColumn fx:id="magazineConferenceDate" prefWidth="213.0" text="Дата проведения" />
-                                        <TableColumn fx:id="magazineLinkOnPage" prefWidth="188.0" text="Ссылка на страницу" />
-                                        <TableColumn fx:id="magazineEmailAddresses" minWidth="0.0" prefWidth="185.0" text="Адреса электр. почты" />
-                                        <TableColumn fx:id="magazineReleaseId" minWidth="0.0" prefWidth="132.0" text="Код выпуска" />
-                                        <TableColumn fx:id="magazinePageRange" minWidth="0.0" prefWidth="126.0" text="Диапазон страниц" />
-                                        <TableColumn fx:id="magazineId" prefWidth="192.0" text="Код журнала" />
-                                    </columns>
-                                </TableView>
-                            </children>
-                        </AnchorPane>
-                    </content>
-                </Tab>
-                <Tab fx:id="releasePage" text="Выпуск">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="1298.0" style="-fx-background-color: #607d8b;">
-                            <children>
-                                <TableView fx:id="releaseTable" layoutY="50.0" prefHeight="603.0" prefWidth="1300.0">
-                                    <columns>
-                                        <TableColumn fx:id="releaseYear" prefWidth="157.0" text="Год выпуска" />
-                                        <TableColumn fx:id="releaseNumber" minWidth="4.0" prefWidth="262.0" text="Номер издания" />
-                                        <TableColumn fx:id="releaseId" minWidth="0.0" prefWidth="251.0" text="Код выпуска" />
+                                        <TableColumn fx:id="magazineName" prefWidth="206.0" text="Название" />
+                              <TableColumn fx:id="magazinePublishType" prefWidth="123.99996948242188" text="Тип издательства" />
+                              <TableColumn fx:id="magazinePublish" prefWidth="196.0" text="Издательство" />
+                              <TableColumn fx:id="magazineCity" prefWidth="159.0" text="Город" />
+                              <TableColumn fx:id="magazineConferenceDate" prefWidth="175.0" text="Дата проведения" />
+                                        <TableColumn fx:id="magazineLinkOnPage" prefWidth="248.0" text="Ссылка на страницу" />
+                                        <TableColumn fx:id="magazineEmailAddresses" minWidth="0.0" prefWidth="192.0" text="Адреса электр. почты" />
+                                        <TableColumn fx:id="magazineId" minWidth="0.0" prefWidth="0.0" text="Код журнала" />
                                     </columns>
                                 </TableView>
                             </children>
@@ -90,12 +68,12 @@
                 </Tab>
                 <Tab fx:id="openPublicationPage" text="Заключение комиссии о возможности открытого публикования">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="1298.0" style="-fx-background-color: #607d8b;">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="648.0" prefWidth="1300.0" style="-fx-background-color: #607d8b;">
                             <children>
-                                <TableView fx:id="openPublicationTable" layoutY="50.0" prefHeight="604.0" prefWidth="1300.0">
+                                <TableView fx:id="openPublicationTable" layoutY="50.0" prefHeight="627.0" prefWidth="1300.0">
                                     <columns>
-                                        <TableColumn fx:id="openPublicationDate" prefWidth="209.0" text="Дата" />
-                                        <TableColumn fx:id="openPublicationNumber" prefWidth="178.0" text="Номер" />
+                                        <TableColumn fx:id="openPublicationDate" prefWidth="350.0" text="Дата" />
+                                        <TableColumn fx:id="openPublicationNumber" prefWidth="350.0" text="Номер" />
                                         <TableColumn fx:id="openPublicationId" prefWidth="177.0" text="Код заключения" />
                                     </columns>
                                 </TableView>
@@ -107,11 +85,11 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="650.0" prefWidth="1298.0" style="-fx-background-color: #607d8b;">
                             <children>
-                                <TableView fx:id="exportControlTable" layoutY="50.0" prefHeight="603.0" prefWidth="1300.0">
+                                <TableView fx:id="exportControlTable" layoutY="50.0" prefHeight="628.0" prefWidth="1300.0">
                                     <columns>
-                                        <TableColumn fx:id="exportControlDate" prefWidth="192.0" text="Дата" />
-                                        <TableColumn fx:id="exportControlNumber" prefWidth="248.0" text="Номер" />
-                                        <TableColumn fx:id="exportControlId" prefWidth="266.0" text="Код заключения" />
+                                        <TableColumn fx:id="exportControlDate" prefWidth="350.0" text="Дата" />
+                                        <TableColumn fx:id="exportControlNumber" prefWidth="350.0" text="Номер" />
+                                        <TableColumn fx:id="exportControlId" prefWidth="479.0" text="Код заключения" />
                                     </columns>
                                 </TableView>
                             </children>
@@ -120,23 +98,15 @@
                 </Tab>
             </tabs>
         </TabPane>
-        <Button fx:id="add" layoutX="491.0" layoutY="721.0" mnemonicParsing="false" text="Добавить">
+        <Button fx:id="add" layoutX="511.0" layoutY="715.0" mnemonicParsing="false" text="Добавить">
             <font>
                 <Font name="Courier New" size="16.0" />
             </font>
         </Button>
-        <Button fx:id="delete" layoutX="679.0" layoutY="721.0" mnemonicParsing="false" text="Удалить">
+        <Button fx:id="delete" layoutX="690.0" layoutY="715.0" mnemonicParsing="false" prefWidth="99.0" text="Удалить">
             <font>
                 <Font name="Courier New" size="16.0" />
             </font>
         </Button>
-        <MenuBar fx:id="menuBar" prefHeight="25.0" prefWidth="1300.0">
-            <menus>
-                <Menu fx:id="createGroup" mnemonicParsing="false" text="Создать группу" />
-                <Menu fx:id="generateConclusions" mnemonicParsing="false" text="Сгенерировать заключения" />
-                <Menu fx:id="generateQuote" mnemonicParsing="false" text="Сгенерировать цитату по ГОСТу" />
-                <Menu fx:id="generatePublishList" mnemonicParsing="false" text="Сгенерировать список публикаций за 5 лет" />
-            </menus>
-        </MenuBar>
     </children>
 </AnchorPane>
